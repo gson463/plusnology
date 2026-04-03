@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Outfit", sans-serif;
+  overflow-x: clip;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 217 19% 17%;
+    --card: 0 0% 100%;
+    --card-foreground: 217 19% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 19% 17%;
+    --primary: 212 97% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 13% 96%;
+    --secondary-foreground: 217 19% 17%;
+    --muted: 220 13% 96%;
+    --muted-foreground: 217 10% 45%;
+    --accent: 217 91% 95%;
+    --accent-foreground: 212 97% 50%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 212 97% 50%;
+    --radius: 0.5rem;
+    
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 212 97% 50%;
+
+    /* Gradient Tokens */
+    --gradient-hero: linear-gradient(135deg, #0f172a 0%, #0479FB 100%);
+    --gradient-card: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+    --gradient-accent: linear-gradient(135deg, #0479FB 0%, #06b6d4 100%);
+  }
+  
+  .dark {
+    --background: 217 19% 17%;
+    --foreground: 0 0% 100%;
+    --card: 217 19% 20%;
+    --card-foreground: 0 0% 100%;
+    --popover: 217 19% 20%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 212 97% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 19% 25%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 217 19% 25%;
+    --muted-foreground: 217 10% 65%;
+    --accent: 217 19% 25%;
+    --accent-foreground: 212 97% 50%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 217 19% 30%;
+    --input: 217 19% 30%;
+    --ring: 212 97% 50%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 212 97% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 212 97% 50%;
+
+    /* Gradient Tokens Dark */
+    --gradient-hero: linear-gradient(135deg, #020617 0%, #0f172a 50%, #0479FB 100%);
+    --gradient-card: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    --gradient-accent: linear-gradient(135deg, #0479FB 0%, #06b6d4 100%);
+  }
+}
+
+@layer components {
+  .professional-card {
+    @apply bg-card rounded-xl p-6 shadow-sm border border-border transition-all duration-300;
+  }
+  
+  .professional-card:hover {
+    @apply shadow-lg -translate-y-1;
+  }
+  
+  .section-spacing {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+  
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .heading-display {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+    letter-spacing: -0.02em;
+  }
+  
+  .heading-section {
+    @apply text-2xl md:text-3xl font-semibold leading-snug;
+  }
+  
+  .heading-card {
+    @apply text-xl md:text-2xl font-semibold;
+  }
+  
+  .text-body {
+    @apply text-base leading-relaxed text-muted-foreground;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-cyan-500;
+  }
+
+  /* Brand Logo Styles */
+  .brand-logo {
+    @apply object-contain transition-all duration-300 ease-in-out;
+    filter: drop-shadow(0 4px 6px rgba(4, 121, 251, 0.15));
+  }
+  
+  .brand-logo:hover {
+    @apply scale-105 opacity-95;
+    filter: drop-shadow(0 8px 16px rgba(4, 121, 251, 0.3));
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .bg-gradient-hero {
+    background-image: var(--gradient-hero);
+  }
+  .bg-gradient-card {
+    background-image: var(--gradient-card);
+  }
+  .bg-gradient-accent {
+    background-image: var(--gradient-accent);
+  }
+  
+  /* Custom Card Shadows */
+  .shadow-service-card {
+    box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.05);
+  }
+  .shadow-service-card-hover {
+    box-shadow: 0 24px 48px -12px rgba(4, 121, 251, 0.15);
+  }
+}

@@ -1,0 +1,5 @@
+## Pages
+- [About Us - Plusnology](/about): Learn about Plusnology
+- [Our Services - Plusnology](/services): Plusnology offers expert Custom System Development, Web App Development, Mobile Apps, Website Development, Desktop Applications, Graphics Design, and Cloud & DevOps Services.
+- [Plusnology - Innovative Software Solutions](/home): Transform your business with cutting-edge software solutions. Web development, cloud services, AI integration, and digital transformation.
+- [Portfolio - Plusnology](/portfolio): Explore Plusnology portfolio: microfinance portals, pharmacy operations, retail e-commerce, compliance, and business management systems.
