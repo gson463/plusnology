@@ -34,7 +34,7 @@ const ServicesPage = () => {
         <title>Our Services - Plusnology</title>
         <meta
           name="description"
-          content="Plusnology offers software development, PDPC domain compliance readiness, Cloud & DevOps, and more for businesses in Tanzania and beyond."
+          content="Plusnology offers software development, PDPC Domain Compliance Readiness, Cloud & DevOps, and more for businesses in Tanzania and beyond."
         />
       </Helmet>
 

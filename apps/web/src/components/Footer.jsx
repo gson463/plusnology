@@ -9,7 +9,7 @@ const Footer = () => {
   const quickLinks = [
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
-    { name: 'PDPC compliance', path: '/services/pdpc-compliance' },
+    { name: 'PDPC Compliance', path: '/services/pdpc-compliance' },
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },

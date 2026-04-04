@@ -80,9 +80,9 @@ const PACKAGES = [
 const whatsappComplianceLead = () => {
   sendToWhatsApp(
     [
-      '*Plusnology — PDPC / domain compliance*',
+      '*Plusnology — PDPC / Domain Compliance*',
       '',
-      'I want help getting my domain aligned with PDPC-style criteria (SSL, Privacy Policy, consent, data practices).',
+      'I want help getting my domain aligned with PDPC-Style Criteria (SSL, Privacy Policy, consent, data practices).',
       '',
       'Domain: ',
       'Package interest: (audit / implementation / ongoing)',
@@ -102,7 +102,7 @@ const ComplianceServicePage = () => {
         <title>PDPC Domain Compliance & Privacy Readiness - Plusnology</title>
         <meta
           name="description"
-          content="Get your website aligned with PDPC-style domain checks: HTTPS, Privacy Policy, consent, and transparent personal data practices. Paid audits, implementation, and ongoing support from Plusnology Tanzania."
+          content="Get your website aligned with PDPC-Style Domain Checks: HTTPS, Privacy Policy, consent, and transparent personal data practices. Paid audits, implementation, and ongoing support from Plusnology Tanzania."
         />
       </Helmet>
 
@@ -117,7 +117,9 @@ const ComplianceServicePage = () => {
               Tanzania data protection readiness
             </div>
             <h1 className="heading-display mb-6 text-balance">
-              PDPC-style <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0479FB] to-cyan-400">domain compliance</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0479FB] to-cyan-400">
+                PDPC-Style Domain Compliance
+              </span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               Many domains do not comply because basic building blocks are missing—secure HTTPS, a real Privacy Policy,
@@ -168,7 +170,7 @@ const ComplianceServicePage = () => {
                 <div className="aspect-[4/3] bg-muted relative">
                   <img
                     src="/compliance/pdpc-domain-report-sample.png"
-                    alt="Example PDPC-style domain compliance report for plusnology.tech"
+                    alt="Example PDPC-Style Domain Compliance report for plusnology.tech"
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
