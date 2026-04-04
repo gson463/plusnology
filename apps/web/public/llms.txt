@@ -1,5 +1,6 @@
 ## Pages
 - [About Us - Plusnology](/about): Learn about Plusnology
-- [Our Services - Plusnology](/services): Plusnology offers expert Custom System Development, Web App Development, Mobile Apps, Website Development, Desktop Applications, Graphics Design, and Cloud & DevOps Services.
+- [Our Services - Plusnology](/services): Plusnology offers software development, PDPC domain compliance readiness, Cloud & DevOps, and more for businesses in Tanzania and beyond.
+- [PDPC Domain Compliance & Privacy Readiness - Plusnology](/complianceservice): Get your website aligned with PDPC-style domain checks: HTTPS, Privacy Policy, consent, and transparent personal data practices. Paid audits, implementation, and ongoing support from Plusnology Tanzania.
 - [Plusnology - Innovative Software Solutions](/home): Transform your business with cutting-edge software solutions. Web development, cloud services, AI integration, and digital transformation.
 - [Portfolio - Plusnology](/portfolio): Explore Plusnology portfolio: microfinance portals, pharmacy operations, retail e-commerce, compliance, and business management systems.

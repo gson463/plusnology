@@ -3,6 +3,15 @@
  */
 export const SERVICES = [
   {
+    id: 'pdpc-compliance',
+    title: 'PDPC Domain Compliance & Privacy Readiness',
+    description:
+      'Many domains fail PDPC-style checks because HTTPS, Privacy Policy, consent, and data practices are missing or weak. We implement and verify what auditors look for—so your site can pass the criteria that feed domain compliance reports.',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3',
+    detailPath: '/services/pdpc-compliance',
+    heroImage: '/compliance/pdpc-domain-report-sample.png',
+  },
+  {
     id: 'desktop-apps',
     title: 'Desktop Applications Development',
     description:

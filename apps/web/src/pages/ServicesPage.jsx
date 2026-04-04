@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion, useInView } from 'framer-motion';
-import { Monitor, Globe, Cpu, Smartphone, Layout, Palette, Cloud } from 'lucide-react';
+import { Monitor, Globe, Cpu, Smartphone, Layout, Palette, Cloud, ShieldCheck } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import ServiceCard from '@/components/ServiceCard.jsx';
@@ -9,6 +9,7 @@ import AnimatedSection from '@/components/AnimatedSection.jsx';
 import { SERVICES } from '@/data/servicesCatalog.js';
 
 const SERVICE_ICONS = {
+  'pdpc-compliance': ShieldCheck,
   'desktop-apps': Monitor,
   'web-apps': Globe,
   'custom-systems': Cpu,
@@ -33,7 +34,7 @@ const ServicesPage = () => {
         <title>Our Services - Plusnology</title>
         <meta
           name="description"
-          content="Plusnology offers expert Custom System Development, Web App Development, Mobile Apps, Website Development, Desktop Applications, Graphics Design, and Cloud & DevOps Services."
+          content="Plusnology offers software development, PDPC domain compliance readiness, Cloud & DevOps, and more for businesses in Tanzania and beyond."
         />
       </Helmet>
 
@@ -79,6 +80,8 @@ const ServicesPage = () => {
                 title={service.title}
                 description={service.description}
                 image={service.image}
+                detailPath={service.detailPath}
+                heroImage={service.heroImage}
                 index={index}
                 isInView={isGridInView}
               />
