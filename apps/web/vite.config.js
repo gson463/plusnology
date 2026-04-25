@@ -297,10 +297,14 @@ export default defineConfig({
 	server: {
 		port: 3000,
 		cors: true,
-		headers: {
-			'Cross-Origin-Embedder-Policy': 'credentialless',
-		},
+		// COOP/COEP can break dev clients or embedded preview tools; not required for this app.
 		allowedHosts: true,
+		proxy: {
+			'/api': {
+				target: 'http://127.0.0.1:3001',
+				changeOrigin: true,
+			},
+		},
 	},
 	resolve: {
 		extensions: ['.jsx', '.js', '.tsx', '.ts', '.json',],

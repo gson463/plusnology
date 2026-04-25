@@ -10,6 +10,7 @@ import AboutPage from './pages/AboutPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage.jsx';
 import TermsOfServicePage from './pages/TermsOfServicePage.jsx';
+import InvoiceVerifyPage from './pages/InvoiceVerifyPage.jsx';
 import FloatingWhatsApp from './components/FloatingWhatsApp.jsx';
 import CookieBanner from './components/CookieBanner.jsx';
 
@@ -18,7 +19,7 @@ const AnimatedRoutes = () => {
   const location = useLocation();
   
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait" initial={false}>
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
@@ -28,6 +29,7 @@ const AnimatedRoutes = () => {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/privacy" element={<PrivacyPolicyPage />} />
         <Route path="/terms" element={<TermsOfServicePage />} />
+        <Route path="/verify/:code" element={<InvoiceVerifyPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
