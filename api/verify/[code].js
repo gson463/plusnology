@@ -1,4 +1,4 @@
-import registry from '../../shared/invoiceRegistry.json' assert { type: 'json' };
+import registry from '../../shared/invoiceRegistry.json' with { type: 'json' };
 
 function publicPayload(inv) {
   return {
