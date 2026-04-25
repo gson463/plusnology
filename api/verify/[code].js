@@ -1,15 +1,4 @@
-import { readFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-let registry;
-try {
-  const raw = readFileSync(join(__dirname, '../invoiceRegistry.json'), 'utf8');
-  registry = JSON.parse(raw);
-} catch {
-  registry = { invoices: [] };
-}
+import registry from './invoiceRegistry.json' with { type: 'json' };
 
 function publicPayload(inv) {
   return {
@@ -32,15 +21,22 @@ function publicPayload(inv) {
 }
 
 /**
- * Vercel dynamic routes do not always populate req.query; also SPA rewrites
- * can return HTML for /api/... on misconfiguration — so parse from URL.
+ * Vercel dynamic routes do not always populate req.query; parse from URL path.
+ * Some runtimes pass `req.url` as a full URL.
  */
 function extractCode(req) {
   const fromQuery = (req.query?.code ?? req.query?.slug ?? '').toString().trim();
   if (fromQuery) {
     return decodeURIComponent(fromQuery);
   }
-  const u = String(req.url ?? '');
+  let u = String(req.url ?? '');
+  if (u.startsWith('http')) {
+    try {
+      u = new URL(u).pathname;
+    } catch {
+      /* ignore */
+    }
+  }
   const m = u.match(/\/api\/verify\/([^?#/]+)/);
   if (m) {
     return decodeURIComponent(m[1]);
@@ -56,7 +52,8 @@ export default function handler(req, res) {
   if (!code) {
     return res.status(400).json({ valid: false, error: 'missing_code' });
   }
-  const inv = registry.invoices?.find((i) => i.verifyCode === code);
+  const list = Array.isArray(registry.invoices) ? registry.invoices : [];
+  const inv = list.find((i) => i.verifyCode === code);
   if (!inv) {
     return res.status(404).json({ valid: false, error: 'not_found' });
   }
