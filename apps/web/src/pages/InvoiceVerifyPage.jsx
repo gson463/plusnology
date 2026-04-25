@@ -26,6 +26,14 @@ const InvoiceVerifyPage = () => {
     (async () => {
       try {
         const res = await fetch(url, { method: 'GET' });
+        const type = (res.headers.get('content-type') || '').toLowerCase();
+        if (!type.includes('application/json')) {
+          if (!cancelled) {
+            setErrorKey('not_found');
+            setStatus('error');
+          }
+          return;
+        }
         const data = await res.json().catch(() => ({}));
         if (cancelled) {
           return;

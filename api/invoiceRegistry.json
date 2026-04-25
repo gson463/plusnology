@@ -1,0 +1,22 @@
+{
+  "invoices": [
+    {
+      "verifyCode": "ver_7f3a9c2e1b4d8f6a",
+      "invoiceNumber": "SI-0201",
+      "refPi": "0173",
+      "issueDate": "2026-04-25",
+      "clientName": "Fidem Constructions Limited.",
+      "clientLocation": "Dar es Salaam, Tanzania",
+      "amountTzs": 4000000,
+      "currency": "TZS",
+      "productDescription": "Payroll Gateway + Accounting Software (PAPSG-V1)",
+      "subscriptionTerm": "12 months",
+      "issuerName": "Plusnology",
+      "issuerHandle": "@plusnology",
+      "issuerAddress": "Samora House, Dar es Salaam, Tanzania",
+      "issuerPhone": "+255 755 474 744",
+      "issuerEmail": "develop@plusnology.tech",
+      "issuerWebsite": "https://www.plusnology.tech"
+    }
+  ]
+}
