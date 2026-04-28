@@ -14,6 +14,9 @@ const allDeps = Object.keys(pkg.dependencies || {});
 
 const isDev = process.env.NODE_ENV !== 'production';
 
+/** Dev-only: override when 3001 is already taken (e.g. another app using PORT=3001). */
+const apiProxyTarget = process.env.VITE_API_PROXY_TARGET || 'http://127.0.0.1:3001';
+
 const configHorizonsViteErrorHandler = `
 const observer = new MutationObserver((mutations) => {
 	for (const mutation of mutations) {
@@ -301,7 +304,7 @@ export default defineConfig({
 		allowedHosts: true,
 		proxy: {
 			'/api': {
-				target: 'http://127.0.0.1:3001',
+				target: apiProxyTarget,
 				changeOrigin: true,
 			},
 		},

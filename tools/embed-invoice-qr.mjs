@@ -5,6 +5,7 @@
  *
  * Usage:
  *   node tools/embed-invoice-qr.mjs --in="/path/to/Sales inv201.pdf" --out="./invoice-assets/SI-0201-with-qr.pdf"
+ *   node tools/embed-invoice-qr.mjs --verifyCode=ver_8a3f9e2d1c6b4a7f --in="./Fromark-PPI.pdf" --out="./invoice-assets/PPI-0174-with-qr.pdf"
  */
 
 import fs from 'node:fs';
@@ -23,9 +24,17 @@ function arg(name) {
 
 async function main() {
   const registry = JSON.parse(fs.readFileSync(path.join(root, 'shared/invoiceRegistry.json'), 'utf8'));
-  const inv = registry.invoices[0];
+  const list = Array.isArray(registry.invoices) ? registry.invoices : [];
+  const codeArg = arg('--verifyCode');
+  const inv = codeArg
+    ? list.find((i) => i.verifyCode === codeArg)
+    : list[0];
   if (!inv?.verifyCode) {
-    throw new Error('No invoice with verifyCode in shared/invoiceRegistry.json');
+    throw new Error(
+      codeArg
+        ? `No invoice with verifyCode "${codeArg}" in shared/invoiceRegistry.json`
+        : 'No invoice with verifyCode in shared/invoiceRegistry.json'
+    );
   }
   const base = (inv.issuerWebsite || 'https://www.plusnology.tech').replace(/\/$/, '');
   const verifyUrl = `${base}/verify/${inv.verifyCode}`;
