@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
+import BrandLogo from '@/components/BrandLogo';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,11 +26,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <img 
-              src="https://horizons-cdn.hostinger.com/f2dcab24-7e9d-4f30-8d49-4bbd3690c7ea/78447c8a599db53109d68e05cc806b58.png" 
-              alt="Plusnology Logo" 
-              className="w-10 h-10 md:w-12 md:h-12 brand-logo"
-            />
+            <BrandLogo className="w-10 h-10 md:w-12 md:h-12" />
             <span className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">Plusnology</span>
           </Link>
 

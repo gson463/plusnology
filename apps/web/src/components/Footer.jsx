@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL_HREF } from '@/lib/siteContact.js';
 import { Mail, Phone, MapPin, Instagram, Twitter, Youtube } from 'lucide-react';
+import BrandLogo from '@/components/BrandLogo';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -27,12 +28,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <Link to="/" className="flex items-center space-x-3 mb-4 group inline-flex">
-              <img 
-                src="https://horizons-cdn.hostinger.com/f2dcab24-7e9d-4f30-8d49-4bbd3690c7ea/78447c8a599db53109d68e05cc806b58.png" 
-                alt="Plusnology Logo" 
-                className="w-[60px] h-[60px] brand-logo"
-              />
+            <Link to="/" className="inline-flex items-center space-x-3 mb-4 group">
+              <BrandLogo className="w-[60px] h-[60px]" />
               <span className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">Plusnology</span>
             </Link>
             <p className="text-body text-sm">
