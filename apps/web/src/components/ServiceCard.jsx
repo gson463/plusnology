@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils.js';
+import { BRAND_LOGO_SRC } from '@/lib/brand.js';
 
 const ServiceCard = ({
   icon: Icon,
@@ -27,8 +28,6 @@ const ServiceCard = ({
     }
   };
 
-  const logoUrl = "https://horizons-cdn.hostinger.com/f2dcab24-7e9d-4f30-8d49-4bbd3690c7ea/b728b1645d743cf5551a804418f7cc08.png";
-
   const cardBody = (
     <motion.div
       variants={variants}
@@ -52,7 +51,7 @@ const ServiceCard = ({
             />
           ) : (
             <img
-              src={logoUrl}
+              src={BRAND_LOGO_SRC}
               alt="Plusnology Logo"
               className="h-20 md:h-24 w-auto object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-sm"
             />

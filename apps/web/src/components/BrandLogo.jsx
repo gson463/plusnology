@@ -1,13 +1,14 @@
 import React from 'react';
+import { BRAND_LOGO_SRC } from '@/lib/brand.js';
 
-const BrandLogo = ({ className = '' }) => {
+const BrandLogo = ({ className = '', alt = '' }) => {
   return (
-    <div
-      aria-hidden="true"
-      className={`brand-logo rounded-xl bg-gradient-accent text-white font-bold flex items-center justify-center ${className}`}
-    >
-      PN
-    </div>
+    <img
+      src={BRAND_LOGO_SRC}
+      alt={alt}
+      className={`brand-logo ${className}`}
+      decoding="async"
+    />
   );
 };
 

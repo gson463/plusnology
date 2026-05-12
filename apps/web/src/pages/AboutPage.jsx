@@ -5,6 +5,7 @@ import { Target, Heart, Lightbulb, Award } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import AnimatedSection from '@/components/AnimatedSection.jsx';
+import { BRAND_LOGO_SRC } from '@/lib/brand.js';
 
 const AboutPage = () => {
   const values = [
@@ -86,7 +87,7 @@ const AboutPage = () => {
                 <div className="absolute -inset-4 bg-gradient-accent rounded-3xl opacity-20 group-hover:opacity-30 blur-lg transition-opacity duration-500"></div>
                 <div className="relative bg-white dark:bg-slate-900 rounded-2xl shadow-2xl p-8 sm:p-12 max-w-md w-full flex items-center justify-center">
                   <img
-                    src="https://horizons-cdn.hostinger.com/f2dcab24-7e9d-4f30-8d49-4bbd3690c7ea/1d5ae6b02171138f6226f9ae66aa7969.png"
+                    src={BRAND_LOGO_SRC}
                     alt="Plusnology logo"
                     className="w-full h-auto object-contain max-h-64 sm:max-h-80"
                   />
