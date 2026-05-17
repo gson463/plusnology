@@ -34,6 +34,23 @@
       "issuerPhone": "+255 769 117 685",
       "issuerEmail": "develop@plusnology.tech",
       "issuerWebsite": "https://www.plusnology.tech"
+    },
+    {
+      "verifyCode": "ver_9c5e2b8a1f4d6e3c",
+      "invoiceNumber": "SI-0043",
+      "refPi": "0043",
+      "issueDate": "2026-05-16",
+      "clientName": "Fromark Company Limited",
+      "clientLocation": "Dar es Salaam, Tanzania",
+      "amountTzs": 8300000,
+      "currency": "TZS",
+      "productDescription": "Fromark Internal Control Portal (FICP-V1)",
+      "issuerName": "Plusnology Softwares & Systems",
+      "issuerHandle": "@plusnology",
+      "issuerAddress": "Dar es Salaam, Tanzania",
+      "issuerPhone": "+255 769 117 685",
+      "issuerEmail": "develop@plusnology.tech",
+      "issuerWebsite": "https://www.plusnology.tech"
     }
   ]
 }
